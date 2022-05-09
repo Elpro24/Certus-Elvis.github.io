@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*se cambia el modelo*/
+    box-sizing: border-box;
+}
+html{
+    background-image: url(/imagenes/Mapamundi.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*se acomoda a cualquie tamaño de pantalla*/
+    font-size: 1.5em;
+    /*ocupe toda la pantalla*/
+    min-height: 100%;
+}
+body > *{
+box-shadow: -1px 1px 7px 0px coral;
+border-radius: 4px;
+padding: 10px;
+text-align: center;
+}
+body{
+    display:grid;/* proporciona una cuadrícula de una sola columna */
+    gap:10px;/*Separación de los elementos */
+}
+body{
+    /*definir las areas para mismo diseño*/
+    grid-template-areas:  
+"header"
+"nav"
+"article"
+"aside"
+"footer"
+}
+.header{
+    grid-area: header;
+    background-color: burlywood;
+}
+.nav{
+    grid-area: nav;
+    background-color: darkcyan;
+}
+.article{
+    grid-area: article;
+    background-color: blueviolet;
+}
+.aside{
+    grid-area: aside;
+    background-color: chartreuse;
+}
+.footer{
+    grid-area: footer;
+    background-color: darkgreen;
+}
+
+
+img:hover{
+    /*filter:blur(5px)/*EFECTO DESENFOQUE*/
+    /*filter: grayscale(80%);*/
+    /*filter: sepia(60%);*/
+    /*filter: saturate(180%);*/
+    filter: opacity(.6);
+}
+/*PSEUDOCODIGO. es una palabra clave que se añade a los selctores y que especifa un estado especial del elemento seleccionado*/
+
+/*tamaño tablet*/
+@media (min-width:600px){
+    body{
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas:
+        "header   header"
+        "nav nav"
+        "aside article"
+        "footer footer";
+    }
+}
+/*tamaño escritorio*/
+@media (min-width:900px){
+    body{
+        grid-template:
+    "header header header" 100px
+    "nav article aside" auto
+    "footer footer footer" 100px /
+    200px auto 200px
+     ;
+    }
+}
