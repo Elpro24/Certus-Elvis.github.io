@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    }
+html{
+   background-color: honeydew;}
+   
+
+   .fcc-btn {
+	background-color: #b3b13e;
+	color: white;
+	padding: 15px 25px;
+	text-decoration: none;
+  }
+  
+  .fcc-btn:hover {
+	background-color: #223094;}
+h1{
+    color: maroon;
+}
+.contenedor{
+    height: 100vh;
+    display: flex;
+    /*los div internos sten centrados*/
+    align-items: center;
+}
+
+.lista{
+    display: flex;
+    /* no se visualice la barra de desplazaminetol*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 30px 0;
+    text-align:center ;
+
+}
+.moto{
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+    /*borde exterior a al foto*/
+    outline: 2px solid darkred;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+img:hover{
+    transform: scale(1.2);
+}
